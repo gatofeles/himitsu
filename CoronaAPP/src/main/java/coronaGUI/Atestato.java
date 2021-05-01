@@ -9,18 +9,13 @@ package coronaGUI;
  *
  * @author gatofeles
  */
-public class Paciente extends Pessoa {
-    private String[] sintomas = new String[9];
-    private boolean contaminado;
+public class Atestato {
+    private String resultado_Laudo = "";
+    private int id;
     
-    public void reg_Paciente(){
+    public void buscar_Paciente(int id){
         
     }
-    
-    public void listar_Sintomas(){
-        
-    }
-    
     
     
 }

@@ -36,6 +36,8 @@ public class ListaDeSintomas extends javax.swing.JFrame {
         sintoma6 = new javax.swing.JCheckBox();
         textoSintomas = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        sintoma7 = new javax.swing.JCheckBox();
+        sintoma8 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,6 +84,20 @@ public class ListaDeSintomas extends javax.swing.JFrame {
             }
         });
 
+        sintoma7.setText("Tosse");
+        sintoma7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sintoma7ActionPerformed(evt);
+            }
+        });
+
+        sintoma8.setText("Espirro");
+        sintoma8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sintoma8ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -104,7 +120,12 @@ public class ListaDeSintomas extends javax.swing.JFrame {
                             .addComponent(textoSintomas)
                             .addComponent(sintoma1)
                             .addComponent(sintoma2))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sintoma8)
+                            .addComponent(sintoma7))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,7 +149,11 @@ public class ListaDeSintomas extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(sintoma6))
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sintoma7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sintoma8)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
@@ -156,6 +181,14 @@ public class ListaDeSintomas extends javax.swing.JFrame {
         cadastroPaciente.setVisible(true);    
   
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void sintoma7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sintoma7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sintoma7ActionPerformed
+
+    private void sintoma8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sintoma8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sintoma8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,6 +234,8 @@ public class ListaDeSintomas extends javax.swing.JFrame {
     private javax.swing.JCheckBox sintoma4;
     private javax.swing.JCheckBox sintoma5;
     private javax.swing.JCheckBox sintoma6;
+    private javax.swing.JCheckBox sintoma7;
+    private javax.swing.JCheckBox sintoma8;
     private javax.swing.JLabel textoSintomas;
     // End of variables declaration//GEN-END:variables
 }
