@@ -82,6 +82,8 @@ public class CoronaGUI extends javax.swing.JFrame {
 
     private void pacienteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pacienteBtnActionPerformed
         // TODO add your handling code here:
+       ListaDeSintomas listaDeSintomas = new ListaDeSintomas();
+       listaDeSintomas.setVisible(true);
     }//GEN-LAST:event_pacienteBtnActionPerformed
 
     private void equipeMedBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equipeMedBtnActionPerformed
