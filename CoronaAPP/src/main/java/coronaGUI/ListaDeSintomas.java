@@ -32,9 +32,10 @@ public class ListaDeSintomas extends javax.swing.JFrame {
         sintoma2 = new javax.swing.JCheckBox();
         sintoma4 = new javax.swing.JCheckBox();
         sintoma3 = new javax.swing.JCheckBox();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
+        sintoma5 = new javax.swing.JCheckBox();
+        sintoma6 = new javax.swing.JCheckBox();
+        textoSintomas = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,54 +64,71 @@ public class ListaDeSintomas extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox1.setText("Corisa");
+        sintoma5.setText("Corisa");
 
-        jCheckBox2.setText("Vômito");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        sintoma6.setText("Vômito");
+        sintoma6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                sintoma6ActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Selecione um ou mais sintomas");
+        textoSintomas.setText("Selecione um ou mais sintomas");
+
+        jButton1.setText("Cadastro");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(77, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox1)
-                    .addComponent(sintoma1)
-                    .addComponent(sintoma3)
-                    .addComponent(sintoma4)
-                    .addComponent(sintoma2)
-                    .addComponent(jLabel1))
-                .addGap(151, 151, 151))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sintoma3)
+                            .addComponent(sintoma4)
+                            .addComponent(sintoma6)
+                            .addComponent(sintoma5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 214, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(textoSintomas)
+                            .addComponent(sintoma1)
+                            .addComponent(sintoma2))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addGap(26, 26, 26)
+                .addComponent(textoSintomas)
                 .addGap(18, 18, 18)
                 .addComponent(sintoma1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(sintoma2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sintoma3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sintoma4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox2)
-                .addGap(71, 71, 71))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(sintoma3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(sintoma4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(sintoma5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(sintoma6))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
@@ -128,9 +146,16 @@ public class ListaDeSintomas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_sintoma3ActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void sintoma6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sintoma6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_sintoma6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CadastroPaciente cadastroPaciente = new CadastroPaciente();
+        cadastroPaciente.setVisible(true);    
+  
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,13 +193,14 @@ public class ListaDeSintomas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JCheckBox sintoma1;
     private javax.swing.JCheckBox sintoma2;
     private javax.swing.JCheckBox sintoma3;
     private javax.swing.JCheckBox sintoma4;
+    private javax.swing.JCheckBox sintoma5;
+    private javax.swing.JCheckBox sintoma6;
+    private javax.swing.JLabel textoSintomas;
     // End of variables declaration//GEN-END:variables
 }
