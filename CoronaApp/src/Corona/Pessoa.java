@@ -8,7 +8,9 @@ public class Pessoa {
     protected String cidade = "";
     protected String estado = "";
     protected int id;
+    protected int CEP;
     private String senha = "";
+
 
     //Getters & Setters
 
@@ -71,6 +73,7 @@ public class Pessoa {
     //Métodos
 
     public void acessarMensagens(){
+
 
     }
 }

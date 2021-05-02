@@ -39,7 +39,7 @@ public class MembroSaude extends Pessoa {
         System.out.println("1 - Sim\n 2 - Não");
         resposta2 = scan.nextLine();
         resposta = Integer.parseInt(resposta2);
-        
+
         if(resposta == 1){
             this.Lider = true;
         }

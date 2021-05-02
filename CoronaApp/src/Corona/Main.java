@@ -25,6 +25,7 @@ public class Main {
         if(resposta == 1){
 
             paciente.reg_Paciente();
+            paciente.listar_Sintomas();
             pacientes[contadorPaciente++] = paciente;
 
 

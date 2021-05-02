@@ -20,7 +20,6 @@ public class Paciente extends Pessoa {
 
         for (int i = 0; i < strArray.length; i++) {
             this.sintomas[i] = Integer.parseInt(strArray[i]);
-            System.out.println(this.sintomas[i]);
         }
 
         System.out.println("Digite seu nome:\n");
@@ -37,8 +36,11 @@ public class Paciente extends Pessoa {
         resposta2 = scan.nextLine();
         this.estado = resposta2;
 
-        System.out.println("Digite sua Cidade:\n");
+        System.out.println("Digite seu CEP:\n");
+        resposta2 = scan.nextLine();
+        this.CEP = Integer.parseInt(resposta2);
 
+        System.out.println("Digite sua Cidade:\n");
         resposta2 = scan.nextLine();
         this.cidade = resposta2;
 
@@ -53,6 +55,36 @@ public class Paciente extends Pessoa {
 
     public void listar_Sintomas(){
 
+        System.out.println("Lista de Sintomas:");
+
+        for (Integer sintoma:this.sintomas) {
+            switch (sintoma){
+                case 1:
+                    System.out.println("Febre");
+                    break;
+                case 2:
+                    System.out.println("Vômito");
+                    break;
+                case 3:
+                    System.out.println("Tosse");
+                    break;
+                case 4:
+                    System.out.println("Diarréia");
+                    break;
+                case 5:
+                    System.out.println("Corisa");
+                    break;
+                case 6:
+                    System.out.println("Espirro");
+                    break;
+                case 7:
+                    System.out.println("Falta de Ar");
+                    break;
+                case 8:
+                    System.out.println("Dor no corpo");
+                    break;
+            }
+        }
 
 
     }
