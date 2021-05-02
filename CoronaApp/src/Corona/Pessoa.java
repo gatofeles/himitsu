@@ -1,16 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package coronaGUI;
+package Corona;
 
-/**
- *
- * @author gatofeles
- */
 public class Pessoa {
-    
     //Propriedades
     protected String nome = "";
     protected int telefone;
@@ -19,7 +9,7 @@ public class Pessoa {
     protected String estado = "";
     protected int id;
     private String senha = "";
-    
+
     //Getters & Setters
 
     public String getNome() {
@@ -69,24 +59,18 @@ public class Pessoa {
     public void setId(int id) {
         this.id = id;
     }
-    
-      public String getSenha() {
+
+    public String getSenha() {
         return senha;
     }
 
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
+
     //Métodos
-    
+
     public void acessarMensagens(){
-        
+
     }
-
-
-  
-    
-    
-    
 }
