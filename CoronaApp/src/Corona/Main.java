@@ -12,16 +12,17 @@ public class Main {
         int contadorPaciente = 0;
         Paciente paciente = new Paciente();
         int resposta = -1;
+        int resposta1 = -1;
         int aux1 = -1;
         int aux2 = -1;
         int aux3 = -1;
         String resposta2 = "";
         Scanner scan = new Scanner(System.in);
         String texto = "";
-        int[] sintomas = new int[9];
+        int[] sintomas = {-1,-1,-1,-1,-1,-1,-1,-1,-1};
 
-    while(resposta != 0) {
-        while (resposta != 1 && resposta != 2) {
+    while(resposta1 != 0) {
+        while (resposta != 1 && resposta != 2 && resposta != 0) {
             System.out.println("***Corona App***\n");
             System.out.println("Escolha uma das opções:\n" +
                     "1-Paciente\n2-Equipe Médica\n 0-Sair do Programa");
@@ -35,7 +36,10 @@ public class Main {
             pacientes[contadorPaciente++] = paciente;
 
 
-        } else {
+        }
+
+
+        else if(resposta == 2){
 
             while (resposta != 0) {
                 System.out.println("O que você gostaria de fazer?");
@@ -71,23 +75,24 @@ public class Main {
                         if(aux3==1){
                             System.out.println("Digite os números correspondentes aos síntomas que possui separados por vírgula.");
                             System.out.println("1 - Febre\n 2 - Vômito\n 3 - Tosse\n 4 - Diarréia\n 5 - Corisa\n 6 - Espirro\n 7 - Falta de ar\n 8 - Dor no corpo");
+                            scan.nextLine();
                             resposta2 = scan.nextLine();
 
                             String[] strArray = resposta2.split(",");
                             for (int i = 0; i < strArray.length; i++) {
                                sintomas[i] = Integer.parseInt(strArray[i]);
                             }
-                            membroSaude.buscar_Paciente(aux3, sintomas, pacientes);
+                            membroSaude.buscar_Paciente(aux3, sintomas,"", pacientes);
                         }
 
                         else if(aux3 == 2 || aux3 == 3){
                             System.out.println("Digite a busca.");
                             resposta2 = scan.nextLine();
-                            membroSaude.buscar_Paciente(aux3, resposta2, pacientes);
+                            membroSaude.buscar_Paciente(aux3,sintomas,resposta2, pacientes);
                         }
 
                         else{
-                            membroSaude.buscar_Paciente(aux3, 0, pacientes);
+                            membroSaude.buscar_Paciente(aux3, sintomas,"", pacientes);
                         }
                         break;
 
@@ -95,6 +100,13 @@ public class Main {
 
             }
 
+        }
+
+        System.out.println("Para sair do programa digite 0. Caso contrário, digite -1");
+        resposta1 = scan.nextInt();
+        if(resposta1 != 0){
+            resposta = -1;
+            System.out.println(pacientes[0].nome);
         }
 
     }

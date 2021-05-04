@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Paciente extends Pessoa {
 
-    public int[] sintomas = new int[9];
+    public int[] sintomas = {-1,-1,-1,-1,-1,-1,-1,-1,-1};
     private boolean contaminado;
 
     public void reg_Paciente(){

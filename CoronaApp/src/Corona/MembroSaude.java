@@ -15,8 +15,89 @@ public class MembroSaude extends Pessoa {
     }
 
 
-    public void buscar_Paciente(int opcao, Object busca, Paciente[] pacientes){
+    public void buscar_Paciente(int opcao, int[] sintomas,String local, Paciente[] pacientes){
 
+        int cont = 0;
+
+        if(opcao == 1){
+            for (Paciente paciente: pacientes) {
+                cont++;
+
+                if(paciente == null){
+                    break;
+                }
+                else {
+                    boolean igual = true;
+                    int cont2 = 0;
+                    for (int sintoma: sintomas) {
+
+                            if(sintoma!=paciente.sintomas[cont2]){
+                                System.out.println("Falhou!!");
+                                System.out.println(sintoma);
+                                System.out.println(paciente.sintomas[cont2]);
+                                System.out.println(cont);
+                                igual = false;
+
+                        }
+                            cont2++;
+                    }
+                    if(igual){
+                        System.out.println(paciente.nome);
+                    }
+                }
+            }
+        }
+
+        else if(opcao == 2){
+
+            for (Paciente paciente: pacientes) {
+                cont++;
+
+                if(paciente == null){
+                    break;
+                }
+                else {
+
+                  if(paciente.estado == local){
+                      System.out.println(paciente.nome);
+                  }
+
+                }
+            }
+
+        }
+
+        else if(opcao == 3){
+
+            for (Paciente paciente: pacientes) {
+                cont++;
+
+                if(paciente == null){
+                    break;
+                }
+                else {
+
+                    if(paciente.cidade == local){
+                        System.out.println(paciente.nome);
+                    }
+
+                }
+            }
+        }
+
+
+        else{
+            for (Paciente paciente: pacientes) {
+                cont++;
+
+                if(paciente == null){
+                    break;
+                }
+                else {
+                        System.out.println(paciente.nome);
+                }
+            }
+        }
     }
 
     public void gerarAtestado(String resultado_Laudo, int num_Atestado, Paciente paciente){

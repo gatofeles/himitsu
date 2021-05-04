@@ -28,6 +28,7 @@ public class Atestado {
 
         else {
             System.out.println("Paciente não contaminado.");
+
         }
     }
 }
