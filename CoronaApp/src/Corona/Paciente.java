@@ -53,6 +53,14 @@ public class Paciente extends Pessoa {
 
     }
 
+    public boolean isContaminado() {
+        return contaminado;
+    }
+
+    public void setContaminado(boolean contaminado) {
+        this.contaminado = contaminado;
+    }
+
     public void listar_Sintomas(){
 
         System.out.println("Lista de Sintomas:");
